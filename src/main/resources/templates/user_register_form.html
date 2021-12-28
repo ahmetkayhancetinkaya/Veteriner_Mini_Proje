@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+    <div align="center">
+        <h1>User Registration</h1>
+         <form action="#" th:action="@{/veteriner/user_register}" th:object="${owners}" method="post">
+             <label>Identity Number:</label>
+             <input type="text" th:field="*{identity_number}"/><br/><br/><br/>
+
+             <label>Name:</label>
+             <input type="text" th:field="*{name}"/><br/><br/><br/>
+
+             <label>Surname:</label>
+             <input type="text" th:field="*{surname}"/><br/><br/><br/>
+
+             <label>Telephone Number:</label>
+             <input type="text" th:field="*{telephoneNumber}"/><br/><br/><br/>
+
+             <label>E-mail:</label>
+             <input type="text" th:field="*{e_mail}"/><br/><br/><br/>
+
+             <label>Animal Name:</label>
+             <input type="text" th:field="*{animals[0].name}"/><br/><br/><br/>
+
+             <label>Animal Type:</label>
+             <input type="text" th:field="*{animals[0].type}"/><br/><br/><br/>
+
+             <label>Animal Breed:</label>
+             <input type="text" th:field="*{animals[0].breed}"/><br/><br/><br/>
+
+             <label>Animal Age:</label>
+             <input type="text" th:field="*{animals[0].age}"/><br/><br/><br/>
+
+
+             <button type="submit">Register</button>
+         </form>
+    </div>
+
+</body>
+</html>
